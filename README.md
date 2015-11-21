@@ -25,7 +25,9 @@ user_image.png is the user's custom image.
 
 Example:  
 ```python digit_recog.py digits.png test_image.png```  
-The above will generate 2 output files.  
+
+Executing the program will generate 2 output files.  
+
 original_overlay.png -> This is the original image with digit boxes and the numbers on the top.    
 final_digits.png -> This is a plain image with just the recognized numbers printed.  
 
