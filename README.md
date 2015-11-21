@@ -1,12 +1,8 @@
 # Python-Custom-Digit-Recognition
 
 You can apply a simple OCR on your own handrwitten digits using this python script.
-
 I have used OpenCV to pre-process the image and to extract the digits from the picture.
-
-Using K-Nearest Neighbours as our model - we train it using the freely [available](http://yann.lecun.com/exdb/mnist/) MNIST data set.
-
-5000 MNIST digits have been printed on a single .png image.Each digit is 20x20.
+Using K-Nearest Neighbours as my model - I trained it using the freely [available](http://yann.lecun.com/exdb/mnist/) MNIST data set. 5000 MNIST digits have been printed on a single .png image where each digit is 20x20 in size.
 
 ##Analysis
 I tried using just extracted the pixels as data to train and to predict the digits, but the accuracy was too low even on popular classification algorithms like SVM,KNN and Neural Netoworks.  I did improve the accuracy a little bit after trying some custom threshold values. The best accuracy I could achieve only using pixel values was close to 55-60% that was after converting all the images to Black OR White from Black AND White.    
