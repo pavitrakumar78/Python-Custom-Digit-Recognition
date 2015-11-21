@@ -23,7 +23,7 @@ Using just only HOG histogram vectors as features drastically improved the accur
 digits.png is the MNIST digits printed into one image - it is used for training.  
 user_image.png is the user's custom image.  
 ###Note:  
-User image should be a scanned (atleast 300dpi) image.
+User image should be a scanned (atleast 300dpi) image.  
 Image can be any format supported by OpenCV.
 
 ##Dependencies
