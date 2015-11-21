@@ -15,3 +15,20 @@ After searching and reading about feature extraction from images for OCR - I stu
 It works by dividing the image into small (usually 8x8 pixels) cells and blocks of 4x4 cells. Each cell has a fixed number of gradient orientation bins. Each pixel in the cell votes for a gradient orientation bin with a vote proportional to the gradient magnitude at that pixel or simple put, the "histogram" counts how many pixels have an edge with a specific orientation.  More more info please refer [this](https://gilscvblog.wordpress.com/2013/08/18/a-short-introduction-to-descriptors/) blog post.
 
 Using just only HOG histogram vectors as features drastically improved the accuracy of the prediction.  Currently, I have used KNN from OpenCV as my model - I tried using SVM from the same module, but its accuracy was not as good as KNN. The best accuracy I have achieved on a sample image of about 100 digits is 80%.  In the future, I might add more features after looking into SIFT, SURF or even try to get a better accuracy using just the pixels as data! 
+
+##Usage
+
+```python digit_recog.py digits.png user_image.png```
+
+digits.png is the MNIST digits printed into one image - it is used for training.  
+user_image.png is the user's custom image.  
+###Note:  
+User image should be a scanned (atleast 300dpi) image.
+Image can be any format supported by OpenCV.
+
+##Dependencies
+
+OpenCV 2.4 or 3 (look comments - there are minor changes in syntax)
+NumPy
+skimage
+scipy
