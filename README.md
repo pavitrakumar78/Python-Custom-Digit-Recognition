@@ -22,6 +22,13 @@ Using just only HOG histogram vectors as features drastically improved the accur
 
 digits.png is the MNIST digits printed into one image - it is used for training.  
 user_image.png is the user's custom image.  
+
+Example:  
+```python digit_recog.py digits.png test_image.png```  
+The above will generate 2 output files.  
+original_overlay.png -> This is the original image with digit boxes and the numbers on the top.    
+final_digits.png -> This is a plain image with just the recognized numbers printed.  
+
 ###Note:  
 User image should be a scanned (atleast 300dpi) image.  
 Image can be any format supported by OpenCV.
