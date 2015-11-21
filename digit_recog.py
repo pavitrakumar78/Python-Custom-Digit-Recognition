@@ -108,7 +108,6 @@ def proc_user_img(fn,model):
     
     ret,thresh = cv2.threshold(imgray,127,255,0)   
        
-    #best combo so far
     thresh = cv2.erode(thresh,kernel,iterations = 1)
     thresh = cv2.dilate(thresh,kernel,iterations = 1)
     thresh = cv2.erode(thresh,kernel,iterations = 1)
