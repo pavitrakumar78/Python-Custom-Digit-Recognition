@@ -28,10 +28,10 @@ Example:
 
 Executing the program will generate 2 output files.  
 
-This is the original image with digit boxes and the numbers on the top.  
-[original_overlay](https://github.com/pavitrakumar78/Python-Custom-Digit-Recognition/blob/master/original_overlay.png)
-This is a plain image with just the recognized numbers printed.  
-[final_digits](https://github.com/pavitrakumar78/Python-Custom-Digit-Recognition/blob/master/final_digits.png)
+This is the original image with digit boxes and the numbers on the top.   
+![original_overlay](https://github.com/pavitrakumar78/Python-Custom-Digit-Recognition/blob/master/original_overlay.png)
+This is a plain image with just the recognized numbers printed.   
+![final_digits](https://github.com/pavitrakumar78/Python-Custom-Digit-Recognition/blob/master/final_digits.png)
 
 ###Note:  
 User image should be a scanned (atleast 300dpi) image.  
