@@ -40,6 +40,6 @@ Image can be any format supported by OpenCV.
 ##Dependencies
 
 OpenCV 2.4 or 3 (look comments - there are minor changes in syntax)
-NumPy
-skimage
-scipy
+NumPy  
+skimage  
+scipy  
