@@ -16,7 +16,7 @@ It works by dividing the image into small (usually 8x8 pixels) cells and blocks 
 
 Using just only HOG histogram vectors as features drastically improved the accuracy of the prediction.  Currently, I have used KNN from OpenCV as my model - I tried using SVM from the same module, but its accuracy was not as good as KNN. The best accuracy I have achieved on a sample image of about 100 digits is 80%.  In the future, I might add more features after looking into SIFT, SURF or even try to get a better accuracy using just the pixels as data! 
 
-##Usage  
+## Usage  
 
 ```python digit_recog.py digits.png user_image.png```
 
