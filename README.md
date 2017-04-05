@@ -35,7 +35,7 @@ This is a plain image with just the recognized numbers printed.
 
 ### Note:  
 -User image should be a scanned (atleast 300dpi) image.  
--Image can be any format supported by OpenCV.
+-Image can be any format supported by OpenCV.  
 -If custom dataset is to be used for training, then `split2d` method's parameters should be changed to avoid `ValueError: array split does not result in an equal division`. i.e if you are going to use `python digit_recog.py <your-own-training-data.jpg/png> <test-data.jpg/png>` then adjust the `DIGIT_DIM` parameter and resize the training image so that it looks more or less like the default MNSIT iamge (digits.png). `split2d` basically splits the input image into small cells of size `DIGIT_DIM x DIGIT_DIM` and uses those cells (images) for training.
 
 
