@@ -39,6 +39,7 @@ def load_digits(fn):
     digits_img = cv2.imread(fn, 0)
     digits = split2d(digits_img, (DIGIT_DIM, DIGIT_DIM))
     labels = np.repeat(np.arange(CLASS_N), len(digits)/CLASS_N)
+    #2500 samples in the digits.png so repeat 0-9 2500/10(0-9 - no. of classes) times.
     return digits, labels
     
 
