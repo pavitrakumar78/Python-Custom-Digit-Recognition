@@ -163,7 +163,7 @@ if __name__ == '__main__':
     print __doc__
     
     if len(sys.argv) < 3:
-        print "Enter Proper Arguments \n Usage: digit_recog.py training-image.png testing_image.png \n Example: digit_recog.py digits.png test_image.png"
+        print "Enter Proper Arguments \n Usage: digit_recog.py training_image.png testing_image.png \n Example: digit_recog.py digits.png test_image.png"
         exit(0)
     
     TRAIN_DATA_IMG = sys.argv[1]    
