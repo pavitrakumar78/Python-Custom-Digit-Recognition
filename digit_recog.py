@@ -21,6 +21,10 @@ import sys
 DIGIT_DIM = 20 # size of each digit is SZ x SZ
 CLASS_N = 10 # 0-9
 
+#this method splits the input training image into small cells (of a single digit) and uses these cells as training data.
+#the default training image (MNIST) is a 1000x1000 size image and each digit is of size 20x20. so we divide 1000/20 horizontally and 1000/20 vertically.
+#If you are going to use a custom digit training image, then adjust the code below so that it properly captures the digits in your image.
+#Also, change the labelling scheme in line 41 to correspond to your image.
 def split2d(img, cell_size, flatten=True):
     h, w = img.shape[:2]
     sx, sy = cell_size
