@@ -18,7 +18,7 @@ Using just only HOG histogram vectors as features drastically improved the accur
 
 ## Usage  
 
-*`digit_recog.py` deprecated - may not work with newer versions of libraries*
+`digit_recog.py` *is deprecated - may not work with newer versions of libraries*  
 
 ~```python digit_recog.py digits.png user_image.png```~
 
@@ -28,7 +28,7 @@ Using just only HOG histogram vectors as features drastically improved the accur
 ~Example:~  
 ~```python digit_recog.py digits.png test_image.png```~  
 
-UPDATED CODE: 
+UPDATED CODE: `NEW_digit_recog.py`
 
 ```python NEW_digit_recog.py ```
 
