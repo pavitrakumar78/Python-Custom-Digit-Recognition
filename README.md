@@ -2,7 +2,7 @@
 
 You can apply a simple OCR on your own handrwitten digits using this python script.
 I have used OpenCV to pre-process the image and to extract the digits from the picture.
-Using K-Nearest Neighbours (or SVM) as my model - I trained it using the a my own handwritten data set. I have also added the freely [available](http://yann.lecun.com/exdb/mnist/) MNIST data set so you can experiment on how different datasets work with different handwritings.
+Using K-Nearest Neighbours (or SVM) as my model - I trained it using my own handwritten data set. I have also included the freely [available](http://yann.lecun.com/exdb/mnist/) MNIST data set so you can experiment on how different datasets work with different handwritings.
 
 ## Analysis  
 I tried using just extracted the pixels as data to train and to predict the digits, but the accuracy was too low even on popular classification algorithms like SVM, KNN and Neural Netoworks.  I did improve the accuracy a little bit after trying some custom threshold values. The best accuracy I could achieve only using pixel values was close to 55-60% that was after converting all the images to Black OR White from Black AND White.    
