@@ -143,8 +143,7 @@ def proc_user_img(img_file, model):
 
 
 def get_contour_precedence(contour, cols):
-    tolerance_factor = 10
-    return ((contour[1] // tolerance_factor) * tolerance_factor) * cols + contour[0]  #row-wise ordering
+    return contour[1] * cols + contour[0]  #row-wise ordering
 
 
 #this function processes a custom training image
