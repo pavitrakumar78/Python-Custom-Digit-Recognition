@@ -62,9 +62,9 @@ For your own custom dataset
 ## Dependencies  
 Old:  
 ~OpenCV 2.4 or 3 (look comments - there are minor changes in syntax)~  
-~NumPy  ~  
-~skimage  ~  
-~scipy  ~    
+~NumPy~  
+~skimage~  
+~scipy~    
 
 UPDATED - 2017 Dec for the file `NEW_digit_recog.py`
 Tested on:
