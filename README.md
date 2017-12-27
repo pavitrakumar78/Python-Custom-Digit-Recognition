@@ -18,17 +18,15 @@ Using just only HOG histogram vectors as features drastically improved the accur
 
 ## Usage  
 
-*deprecated - may not work with newer versions of libraries*
+*`digit_recog.py` deprecated - may not work with newer versions of libraries*
 
-```python digit_recog.py digits.png user_image.png```
+~```python digit_recog.py digits.png user_image.png```~
 
-digits.png is the MNIST digits printed into one image - it is used for training.  
-user_image.png is the user's custom image on which the handwritten digits will be classified.
+~digits.png is the MNIST digits printed into one image - it is used for training.~  
+~user_image.png is the user's custom image on which the handwritten digits will be classified.~
 
-*deprecated - may not work with newer versions of libraries*
-
-Example:  
-```python digit_recog.py digits.png test_image.png```  
+~Example:~  
+~```python digit_recog.py digits.png test_image.png```~  
 
 UPDATED CODE: 
 
