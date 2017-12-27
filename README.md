@@ -66,10 +66,10 @@ Old:
 ~skimage~  
 ~scipy~    
 
-UPDATED - 2017 Dec for the file `NEW_digit_recog.py`
-Tested on:
-Windows 10  
-Python 3.5  
+UPDATED - 2017 Dec for the file `NEW_digit_recog.py`  
+Tested on:  
+Windows 10    
+Python 3.5    
   
 Dependencies:  
 numpy 1.31.1  
