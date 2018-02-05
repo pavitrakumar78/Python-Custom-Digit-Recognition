@@ -22,7 +22,7 @@ Using just only HOG histogram vectors as features drastically improved the accur
 
 UPDATED CODE: `NEW_digit_recog.py`
 
-To run code, download/pull repo and execute:
+To run code, download/clone repo and execute:
 ```python NEW_digit_recog.py ```
 
 This code uses my own handwritten digits (`custom_train_digits.jpg`) as training data. You can also use your own but keep the positioning of the digits similar to whats in `custom_train_digits.jpg` file. If you make modifications in the format of the custom training data (your handwritten digits) make sure to edit `load_digits_custom` function in `NEW_digit_recog.py` as per the changes.
