@@ -37,18 +37,15 @@ This is a plain image with just the recognized numbers printed.
 ### Note:  
 - User image should be a scanned (atleast 300dpi) image.  
 - Image can be any format supported by OpenCV.  
-In `NEW_digit_recog.py`, use either  
-  
-```digits, labels = load_digits(TRAIN_DATA_IMG) #original MNIST data```
-  
-For MNIST dataset OR
-  
+
+In `NEW_digit_recog.py`, use either      
+```digits, labels = load_digits(TRAIN_DATA_IMG) #original MNIST data```  
+For MNIST dataset OR  
 ```digits, labels = load_digits_custom('custom_train_digits.jpg') #my handwritten dataset```
+For your own custom dataset.  
   
-For your own custom dataset  
-  
-Edit `TRAIN_DATA_IMG` and `USER_IMG` At line 190 and 191 if you want to use your own images for testing and training.
-  
+Edit `TRAIN_DATA_IMG` and `USER_IMG` At line 190 and 191 if you want to use your own images for testing and training.  
+    
 ## Libraries and Environement:
 Tested on:  
 Windows 10    
