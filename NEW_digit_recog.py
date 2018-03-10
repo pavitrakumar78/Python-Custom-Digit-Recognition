@@ -187,12 +187,12 @@ def load_digits_custom(img_file):
 
 #------------------data preparation--------------------------------------------
 
-TRAIN_DATA_IMG = 'digits.png' 
+TRAIN_MNIST_IMG = 'digits.png' 
 TRAIN_USER_IMG = 'custom_train_digits.jpg'
 TEST_USER_IMG = 'test_image.png'
 
-#digits, labels = load_digits(TRAIN_DATA_IMG) #original MNIST data
-digits, labels = load_digits_custom(TRAIN_USER_IMG) #my handwritten dataset
+#digits, labels = load_digits(TRAIN_MNIST_IMG) #original MNIST data (not good detection)
+digits, labels = load_digits_custom(TRAIN_USER_IMG) #my handwritten dataset (better than MNIST on my handwritten digits)
 
 print('train data shape',digits.shape)
 print('test data shape',labels.shape)
