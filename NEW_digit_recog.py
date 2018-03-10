@@ -188,7 +188,7 @@ def load_digits_custom(img_file):
 #------------------data preparation--------------------------------------------
 
 TRAIN_DATA_IMG = 'digits.png' 
-TRAIN_USER_IMG = 'train_cv_img.jpg'
+TRAIN_USER_IMG = 'custom_train_digits.jpg'
 TEST_USER_IMG = 'test_image.png'
 
 #digits, labels = load_digits(TRAIN_DATA_IMG) #original MNIST data
