@@ -188,11 +188,11 @@ def load_digits_custom(img_file):
 #------------------data preparation--------------------------------------------
 
 TRAIN_DATA_IMG = 'digits.png' 
-USER_IMG = 'test_image.png'
+TRAIN_USER_IMG = 'train_cv_img.jpg'
+TEST_USER_IMG = 'test_image.png'
 
 #digits, labels = load_digits(TRAIN_DATA_IMG) #original MNIST data
-
-digits, labels = load_digits_custom('custom_train_digits.jpg') #my handwritten dataset
+digits, labels = load_digits_custom(TRAIN_USER_IMG) #my handwritten dataset
 
 print('train data shape',digits.shape)
 print('test data shape',labels.shape)
@@ -210,7 +210,7 @@ print('Accuracy: ',accuracy_score(y_test, preds))
 
 model = KNN_MODEL(k = 4)
 model.train(train_digits_data, labels)
-proc_user_img(USER_IMG, model)
+proc_user_img(TEST_USER_IMG, model)
 
 
 
@@ -221,6 +221,6 @@ print('Accuracy: ',accuracy_score(y_test, preds))
 
 model = SVM_MODEL(num_feats = train_digits_data.shape[1])
 model.train(train_digits_data, labels)
-proc_user_img(USER_IMG, model)
+proc_user_img(TEST_USER_IMG, model)
 
 #------------------------------------------------------------------------------
