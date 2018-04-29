@@ -55,3 +55,7 @@ Dependencies:
 numpy 1.31.1  
 SciPy 0.19.0  
 OpenCv (cv2) 3.2.0  
+
+## Similar Project
+I recently did a project where I use 2 CNNs to do both bounding box regression for detection and classification for digits on the street view house numbers dataset (SVHN). You can view the project here:  
+https://github.com/pavitrakumar78/Street-View-House-Numbers-SVHN-Detection-and-Classification-using-CNN
