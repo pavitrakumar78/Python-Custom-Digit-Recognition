@@ -47,14 +47,38 @@ For your own custom dataset.
 Edit `TRAIN_DATA_IMG` and `USER_IMG` At line 190 and 191 if you want to use your own images for testing and training.  
     
 ## Libraries and Environement:
-Tested on:  
+
+#NOTE: To run this code without errors, you need a virtualenv with the correct libraries because the code is outdated (it was written over 5 years ago...)
+```
+sudo apt-get install python3-venv 
+sudo apt-get install libgtk2.0-dev pkg-config
+
+python3 -m venv github-test
+source github-test/bin/activate
+
+pip3 install numpy==1.18
+pip3 install scipy==1.1.0
+pip3 install scikit-learn==0.21.3
+pip3 install opencv-python==3.2.0.8
+pip3 install scikit-image==0.12.1
+pip3 install Pillow==2.2.2
+
+git clone https://github.com/pavitrakumar78/Python-Custom-Digit-Recognition.git
+
+python NEW_digits_recog.py
+```
+If you don't want to manually work with the versions, I've also added a tested requirements.txt file. Just intall whatever is in there and this script should run without any issues.
+
+The accuarcy may be lower. You will need to tune the hyperparams in the model and try modifying the image processing piepline.
+
+~~Tested on:  
 Windows 10    
 Python 3.5    
   
-Dependencies:  
+~~Dependencies:  
 numpy 1.31.1  
 SciPy 0.19.0  
-OpenCv (cv2) 3.2.0  
+OpenCv (cv2) 3.2.0~~
 
 ## Similar Project
 I recently did a project where I use 2 CNNs to do both bounding box regression for detection and classification for digits on the street view house numbers dataset (SVHN). You can view the project here:  
