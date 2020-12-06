@@ -48,7 +48,7 @@ Edit `TRAIN_DATA_IMG` and `USER_IMG` At line 190 and 191 if you want to use your
     
 ## Libraries and Environement:
 
-#NOTE: To run this code without errors, you need a virtualenv with the correct libraries because the code is outdated (it was written over 5 years ago...)
+# NOTE: To run this code without errors, you need a virtualenv with the correct libraries because the code is outdated (it was written over 5 years ago...)
 ```
 sudo apt-get install python3-venv 
 sudo apt-get install libgtk2.0-dev pkg-config
@@ -71,14 +71,16 @@ If you don't want to manually work with the versions, I've also added a tested r
 
 The accuarcy may be lower. You will need to tune the hyperparams in the model and try modifying the image processing piepline.
 
+
 ~~Tested on:  
 Windows 10    
 Python 3.5    
-  
+
 ~~Dependencies:  
-numpy 1.31.1  
+numpy 1.13.1  
 SciPy 0.19.0  
-OpenCv (cv2) 3.2.0~~
+OpenCv (cv2) 3.2.0
+
 
 ## Similar Project
 I recently did a project where I use 2 CNNs to do both bounding box regression for detection and classification for digits on the street view house numbers dataset (SVHN). You can view the project here:  
