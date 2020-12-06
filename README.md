@@ -75,12 +75,12 @@ The accuarcy may be lower. You will need to tune the hyperparams in the model an
 ~~Tested on:  
 Windows 10    
 Python 3.5    
-
+~~
 ~~Dependencies:  
 numpy 1.13.1  
 SciPy 0.19.0  
 OpenCv (cv2) 3.2.0
-
+~~
 
 ## Similar Project
 I recently did a project where I use 2 CNNs to do both bounding box regression for detection and classification for digits on the street view house numbers dataset (SVHN). You can view the project here:  
