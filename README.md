@@ -75,7 +75,7 @@ The accuarcy may be lower. You will need to tune the hyperparams in the model an
 ~~Tested on:  
 Windows 10    
 Python 3.5    
-~~
+
 ~~Dependencies:  
 numpy 1.13.1  
 SciPy 0.19.0  
