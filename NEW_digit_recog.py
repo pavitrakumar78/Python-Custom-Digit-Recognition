@@ -139,7 +139,7 @@ def proc_user_img(img_file, model):
     plt.imshow(im)
     cv2.imwrite("original_overlay.png",im) 
     cv2.imwrite("final_digits.png",blank_image) 
-    cv2.destroyAllWindows()           
+    #cv2.destroyAllWindows()           
 
 
 def get_contour_precedence(contour, cols):
