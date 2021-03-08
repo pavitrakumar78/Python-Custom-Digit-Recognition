@@ -7,7 +7,9 @@ Created on Sat Nov 21 14:38:53 2015
 """
 
 import numpy as np
-from scipy.misc.pilutil import imresize
+#from scipy.misc.pilutil import imresize
+from needed import imresize
+from PIL import Image
 import cv2 #version 3.2.0
 from skimage.feature import hog
 from matplotlib import pyplot as plt
@@ -48,8 +50,7 @@ def pixels_to_hog_20(img_array):
         fd = hog(img, 
                  orientations=10, 
                  pixels_per_cell=(5,5),
-                 cells_per_block=(1,1), 
-                 visualise=False)
+                 cells_per_block=(1,1))
         hog_featuresData.append(fd)
     hog_features = np.array(hog_featuresData, 'float64')
     return np.float32(hog_features)
@@ -120,7 +121,7 @@ def proc_user_img(img_file, model):
     thresh = cv2.dilate(thresh,kernel,iterations = 1)
     thresh = cv2.erode(thresh,kernel,iterations = 1)
     
-    _,contours,hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    contours,hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     
     digits_rectangles = get_digits(contours,hierarchy)  #rectangles of bounding the digits in user image
     
@@ -163,7 +164,7 @@ def load_digits_custom(img_file):
     thresh = cv2.dilate(thresh,kernel,iterations = 1)
     thresh = cv2.erode(thresh,kernel,iterations = 1)
     
-    _,contours,hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    contours,hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     digits_rectangles = get_digits(contours,hierarchy)  #rectangles of bounding the digits in user image
     
     #sort rectangles accoring to x,y pos so that we can label them
