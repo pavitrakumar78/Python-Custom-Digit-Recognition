@@ -7,7 +7,8 @@ Created on Sat Nov 21 14:38:53 2015
 """
 
 import numpy as np
-from scipy.misc.pilutil import imresize
+#from scipy.misc.pilutil import imresize
+from needed import imresize
 import cv2
 from skimage.feature import hog
 import sys
@@ -35,7 +36,7 @@ def split2d(img, cell_size, flatten=True):
     return cells
 
 def load_digits(fn):
-    print 'loading "%s for training" ...' % fn
+    print( 'loading "%s for training" ...' % fn)
     digits_img = cv2.imread(fn, 0)
     digits = split2d(digits_img, (DIGIT_DIM, DIGIT_DIM))
     labels = np.repeat(np.arange(CLASS_N), len(digits)/CLASS_N)
@@ -47,11 +48,11 @@ def load_digits(fn):
 class KNN_MODEL():                #can also define a custom model in a similar class wrapper with train and predict methods
     def __init__(self, k = 3):
         self.k = k
-        self.model = cv2.KNearest()
+        self.model = cv2.ml.KNearest_create()
 
     def train(self, samples, responses):
-        self.model = cv2.KNearest()
-        self.model.train(samples, responses)
+        self.model = cv2.ml.KNearest_create()
+        self.model.train(samples, cv2.ml.ROW_SAMPLE, responses)
 
     def predict(self, samples):
         retval, results, neigh_resp, dists = self.model.find_nearest(samples, self.k)
@@ -76,7 +77,7 @@ def pixels_to_hog_20(pixel_array):
     hog_featuresData = []
     for img in pixel_array:
         #img = 20x20
-        fd = hog(img, orientations=9, pixels_per_cell=(10,10),cells_per_block=(1,1), visualise=False)
+        fd = hog(img, orientations=9, pixels_per_cell=(10,10),cells_per_block=(1,1))
         hog_featuresData.append(fd)
     hog_features = np.array(hog_featuresData, 'float64')
     return np.float32(hog_features)
@@ -100,7 +101,7 @@ def get_digits(contours):
 
 
 def proc_user_img(fn,model):
-    print 'loading "%s for digit recognition" ...' % fn
+    print( 'loading "%s for digit recognition" ...' % fn)
     im = cv2.imread(fn)
     im_original = cv2.imread(fn)
     
@@ -160,10 +161,10 @@ def proc_user_img(fn,model):
 
 
 if __name__ == '__main__':
-    print __doc__
+    print (__doc__)
     
     if len(sys.argv) < 3:
-        print "Enter Proper Arguments \n Usage: digit_recog.py training_image.png testing_image.png \n Example: digit_recog.py digits.png test_image.png"
+        print( "Enter Proper Arguments \n Usage: digit_recog.py training_image.png testing_image.png \n Example: digit_recog.py digits.png test_image.png")
         exit(0)
     
     TRAIN_DATA_IMG = sys.argv[1]    
@@ -171,7 +172,7 @@ if __name__ == '__main__':
 
     digits, labels = load_digits(TRAIN_DATA_IMG)
 
-    print 'training ....'
+    print( 'training ....')
     # shuffle digits
     rand = np.random.RandomState(123)
     shuffle_index = rand.permutation(len(digits))
@@ -181,7 +182,7 @@ if __name__ == '__main__':
     train_digits_data = pixels_to_hog_20(digits)
     train_digits_labels = labels
     
-    print 'training KNearest...'  #gets 80% in most user images
+    print( 'training KNearest...' ) #gets 80% in most user images
     model = KNN_MODEL(k = 4)
     model.train(train_digits_data, train_digits_labels)
     
