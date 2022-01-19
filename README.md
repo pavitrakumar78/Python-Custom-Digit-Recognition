@@ -66,7 +66,7 @@ pip3 install Pillow==2.2.2
 
 git clone https://github.com/pavitrakumar78/Python-Custom-Digit-Recognition.git
 
-python NEW_digits_recog.py
+python NEW_digit_recog.py
 ```
 If you don't want to manually work with the versions, I've also added a tested requirements.txt file. Just intall whatever is in there and this script should run without any issues.
 
