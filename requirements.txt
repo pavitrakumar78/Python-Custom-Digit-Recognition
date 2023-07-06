@@ -14,6 +14,6 @@ python-dateutil==2.8.1
 PyYAML==5.4
 scikit-image==0.12.1
 scikit-learn==0.21.3
-scipy==1.1.0
+scipy==1.10.0
 six==1.15.0
 toolz==0.11.1
